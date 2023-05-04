@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Series</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="font-family: Arial;">
+
+<div class="container-fluid" style="background-color: rgba(0, 166, 255, 0.293);">
+  <h1>TV Series</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Channel</th>
+            <th scope="col">Seasons</th>
+          </tr>
+        </thead>
+        <tbody id="series">
+          <tr *ngFor="let object of series">
+            <td>
+              <dd>{{object.id}}</dd>
+            </td>
+            <td>
+              <dd><a href="#" style="color: #145eff;">{{object.name}}</a></dd>
+            </td>
+            <td>
+              <dd>{{object.channel}}</dd>
+            </td>
+            <td>
+              <dd>{{object.seasons}}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p>Season average: {{getSeasonAverage()}}</p>
+</div>
+
+</body>
+</html>
